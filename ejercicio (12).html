@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos && (y) en las estructuras condicionales 4 </title>
+</head>
+<body>
+
+<script>
+let x = parseInt(prompt("Ingrese la coordenada x del punto: "));
+let y = parseInt(prompt("Ingrese la coordenada y del punto: "));
+
+if (x > 0 && y > 0) {
+
+  console.log("El punto se encuentra en el primer cuadrante.");
+} else if (x < 0 && y > 0) {
+
+  console.log("El punto se encuentra en el segundo cuadrante.");
+} else if (x < 0 && y < 0) {
+
+  console.log("El punto se encuentra en el tercer cuadrante.");
+} else if (x > 0 && y < 0) {
+
+  console.log("El punto se encuentra en el cuarto cuadrante.");
+} else {
+
+  console.log("El punto se encuentra en el origen.");
+}
+</script>
+</body>
+</html>

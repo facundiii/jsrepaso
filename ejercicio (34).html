@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura FOR</title>
+</head>
+<body>
+<script>
+
+var edadesTurnoMañana = [];
+var edadesTurnoTarde = [];
+var edadesTurnoNoche = [];
+
+for (var i = 0; i < 5; i++) {
+  edadesTurnoMañana.push(prompt("Ingrese la edad del estudiante " + (i + 1) + " del turno mañana: "));
+}
+for (var i = 0; i < 6; i++) {
+  edadesTurnoTarde.push(prompt("Ingrese la edad del estudiante " + (i + 1) + " del turno tarde: "));
+}
+for (var i = 0; i < 11; i++) {
+  edadesTurnoNoche.push(prompt("Ingrese la edad del estudiante " + (i + 1) + " del turno noche: "));
+}
+
+var promedioEdadesTurnoMañana = edadesTurnoMañana.reduce((a, b) => a + b) / edadesTurnoMañana.length;
+var promedioEdadesTurnoTarde = edadesTurnoTarde.reduce((a, b) => a + b) / edadesTurnoTarde.length;
+var promedioEdadesTurnoNoche = edadesTurnoNoche.reduce((a, b) => a + b) / edadesTurnoNoche.length;
+
+console.log("El promedio de las edades del turno mañana es: " + promedioEdadesTurnoMañana);
+console.log("El promedio de las edades del turno tarde es: " + promedioEdadesTurnoTarde);
+console.log("El promedio de las edades del turno noche es: " + promedioEdadesTurnoNoche);
+
+var turnoConPromedioMayor = edadesTurno
+</script>
+    
+</body>
+</html>

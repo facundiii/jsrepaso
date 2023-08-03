@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepto de acumulador</title>
+</head>
+<body>
+
+<script>
+var numeros = [];
+var pares = 0;
+var impares = 0;
+
+for (var i = 0; i < 5; i++) {
+  var numero = prompt("Ingrese un número: ");
+  numeros.push(numero);
+}
+
+for (var i = 0; i < numeros.length; i++) {
+  if (numeros[i] % 2 == 0) {
+    pares++;
+  } else {
+    impares++;
+  }
+}
+console.log("La cantidad de números pares es: " + pares);
+console.log("La cantidad de números impares es: " + impares);
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura (do/while)</title>
+</head>
+<body>
+    
+    <script>
+        var personas = [];
+        var cantidadTotalPersonas = 0;
+        var cantidadVarones = 0;
+        var cantidadMujeres = 0;
+        var cantidadVaronesEntre16y65 = 0;
+        
+        function ingresarDatosPersona() {
+            var documento = prompt("Ingrese el número de documento: ");
+            var edad = prompt("Ingrese la edad: ");
+            var sexo = prompt("Ingrese el sexo ('femenino' o 'masculino'): ");
+            personas.push({
+                documento: documento,
+                edad: edad,
+                sexo: sexo
+            });
+        }
+        
+        function calcularCantidadTotalPersonas() {
+            cantidadTotalPersonas = personas.length;
+        }
+        
+        function calcularCantidadVarones() {
+            cantidadVarones = personas.filter(function(persona) {
+                return persona.sexo === "masculino";
+            }).length;
+        }
+        
+        function calcularCantidadMujeres() {
+            cantidadMujeres = personas.filter(function(persona) {
+                return persona.sexo === "femenino";
+            }).length;
+        }
+        
+        function calcularCantidadVaronesEntre16y65() {
+            cantidadVaronesEntre16y65 = personas.filter(function(persona) {
+                return persona.sexo === "masculino" && persona.edad >= 16 && persona.edad <= 65;
+            }).length;
+        }
+        
+        function mostrarMenu() {
+            console.log("Menú principal");
+            console.log("1. Ingresar datos de una persona");
+            console.log("2. Calcular la cantidad total de personas censadas");
+            console.log("3. Calcular la cantidad de varones");
+            console.log("4. Calcular la cantidad de mujeres");
+            console.log("5. Calcular la cantidad de varones entre 16 y 65 años");
+            console.log("0. Salir");
+        }
+    
+        function seleccionarOpcion() {
+            var opcion = prompt("Seleccione una opción del menú (0-5): ");
+            switch (opcion) {
+                case "1":
+                    ingresarDatosPersona();
+                    break;
+                case "2":
+                    calcularCantidadTotalPersonas();
+                    break;
+                case "3":
+                    calcularCantidadVarones();
+                    break;
+                case "4":
+                    calcularCantidadMujeres();
+                    break;
+                case "5":
+                    calcularCantidadVaronesEntre16y65();
+                    break;
+                case "0":
+                    console.log("Saliendo...");
+                    return; 
+                default:
+                    console.log("Opción inválida");
+            }
+            
+            mostrarMenu();
+        }
+        
+        mostrarMenu();
+    </script>
+</body>
+</html>

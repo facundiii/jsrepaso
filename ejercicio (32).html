@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones con parámetros</title>
+</head>
+<body>
+
+<script>
+function menor(a, b, c) {
+  if (a < b && a < c) {
+    return a;
+  } else if (b < a && b < c) {
+    return b;
+  } else {
+    return c;
+  }
+}
+var a = 10;
+var b = 5;
+var c = 20;
+console.log(menor(a, b, c));
+</script>
+    
+</body>
+</html>

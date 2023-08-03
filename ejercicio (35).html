@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura FOR</title>
+</head>
+<body>
+
+<script>
+var valores = [];
+var cantidadNegativos = 0;
+var cantidadPositivos = 0;
+var cantidadMultiplos15 = 0;
+var valorAcumuladoPares = 0;
+for (var i = 0; i < 10; i++) {
+  valores.push(prompt("Ingrese un valor entero: "));
+}
+for (var i = 0; i < valores.length; i++) {
+  if (valores[i] < 0) {
+    cantidadNegativos++;
+  }
+}
+for (var i = 0; i < valores.length; i++) {
+  if (valores[i] > 0) {
+    cantidadPositivos++;
+  }
+}
+for (var i = 0; i < valores.length; i++) {
+  if (valores[i] % 15 == 0) {
+    cantidadMultiplos15++;
+  }
+}
+for (var i = 0; i < valores.length; i++) {
+  if (valores[i] % 2 == 0) {
+    valorAcumuladoPares += valores[i];
+  }
+}
+console.log("La cantidad de valores negativos ingresados es: " + cantidadNegativos);
+console.log("La cantidad de valores positivos ingresados es: " + cantidadPositivos);
+console.log("La cantidad de múltiplos de 15 es: " + cantidadMultiplos15);
+console.log("El valor acumulado de los números ingresados que son");
+</script>
+    
+</body>
+</html>

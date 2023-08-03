@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepto de acumulador</title>
+</head>
+<body>
+
+<script>
+var sueldos = [];
+var empleadosEntre100y300 = 0;
+var empleadosMasDe300 = 0;
+var importeTotal = 0;
+
+for (var i = 0; i < 5; i++) {
+  var sueldo = prompt("Ingrese el sueldo del empleado " + (i + 1) + ": ");
+  sueldos.push(sueldo);
+}
+
+for (var i = 0; i < sueldos.length; i++) {
+  if (sueldos[i] > 100 && sueldos[i] < 300) {
+    empleadosEntre100y300++;
+  }
+}
+
+for (var i = 0; i < sueldos.length; i++) {
+  if (sueldos[i] > 300) {
+    empleadosMasDe300++;
+  }
+}
+
+for (var i = 0; i < sueldos.length; i++) {
+  importeTotal += sueldos[i];
+}
+console.log("La cantidad de empleados que cobran entre $100 y $300 es: " + empleadosEntre100y300);
+console.log("La cantidad de empleados que cobran más de $300 es: " + empleadosMasDe300);
+console.log("El importe total que gasta la empresa en sueldos es: " + importeTotal);
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura FOR</title>
+</head>
+<body>
+
+<script>
+var ladosTriangulo1, ladosTriangulo2, ladosTriangulo3, ladosTriangulo4;
+var tipoTriangulo1, tipoTriangulo2, tipoTriangulo3, tipoTriangulo4;
+var cantidadTrianguloEquilatero = 0, cantidadTrianguloIsosceles = 0, cantidadTrianguloEscaleno = 0;
+ladosTriangulo1 = prompt("Ingrese los lados del primer triángulo: ");
+ladosTriangulo2 = prompt("Ingrese los lados del segundo triángulo: ");
+ladosTriangulo3 = prompt("Ingrese los lados del tercer triángulo: ");
+ladosTriangulo4 = prompt("Ingrese los lados del cuarto triángulo: ");
+tipoTriangulo1 = determinarTipoTriangulo(ladosTriangulo1);
+tipoTriangulo2 = determinarTipoTriangulo(ladosTriangulo2);
+tipoTriangulo3 = determinarTipoTriangulo(ladosTriangulo3);
+tipoTriangulo4 = determinarTipoTriangulo(ladosTriangulo4);
+cantidadTrianguloEquilatero += (tipoTriangulo1 == "Equilátero") ? 1 : 0;
+cantidadTrianguloIsosceles += (tipoTriangulo1 == "Isósceles") ? 1 : 0;
+cantidadTrianguloEscaleno += (tipoTriangulo1 == "Escaleno") ? 1 : 0;
+cantidadTrianguloEquilatero += (tipoTriangulo2 == "Equilátero") ? 1 : 0;
+cantidadTrianguloIsosceles += (tipoTriangulo2 == "Isósceles") ? 1 : 0;
+cantidadTrianguloEscaleno += (tipoTriangulo2 == "Escaleno") ? 1 : 0;
+cantidadTrianguloEquilatero += (tipoTriangulo3 == "Equilátero") ? 1 : 0;
+</script>
+    
+</body>
+</html>

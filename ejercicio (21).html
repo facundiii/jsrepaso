@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras condicionales compuestas 2</title>
+</head>
+<body>
+    
+    <script>
+        let nota_1, nota_2, nota_3;
+        nota_1 = prompt('Ingrese primer nota:');
+        nota_1 = parseInt(nota_1);
+        nota_2 = prompt('Ingrese segunda nota:');
+        nota_2 = parseInt(nota_2);
+        nota_3 = prompt('Ingrese tercer nota:');
+        nota_3 = parseInt(nota_3);
+        let suma;
+        suma = nota_1 + nota_2 + nota_3;
+        let promedio;
+        promedio = suma / 3;
+        if (promedio >= 4) {
+            document.write('Regular');
+        } else {
+            document.write('Desaprobado');
+        }
+    </script>
+</body>
+</html>

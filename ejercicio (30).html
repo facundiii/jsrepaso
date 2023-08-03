@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase date</title>
+</head>
+<body>
+
+<script>
+function obtenerFechaConFormato() {
+  const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const fecha = new Date();
+  const diaSemana = diasSemana[fecha.getDay()];
+  const diaMes = fecha.getDate();
+  const mes = meses[fecha.getMonth()];
+  const año = fecha.getFullYear();
+  const fechaConFormato = `Hoy es ${diaSemana} ${diaMes} de ${mes} de ${año}`;
+
+  return fechaConFormato;
+}
+const fechaFormateada = obtenerFechaConFormato();
+console.log(fechaFormateada);
+</script>
+</body>
+</html>

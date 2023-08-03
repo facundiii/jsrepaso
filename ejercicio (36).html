@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura FOR</title>
+</head>
+<body>
+
+<script>
+var cantidadPuntos = 0;
+var puntosPrimerCuadrante = 0;
+var puntosSegundoCuadrante = 0;
+var puntosTercerCuadrante = 0;
+var puntosCuartoCuadrante = 0;
+
+cantidadPuntos = prompt("Ingrese la cantidad de puntos a procesar: ");
+
+for (var i = 0; i < cantidadPuntos; i++) {
+  var x = prompt("Ingrese la coordenada x del punto " + (i + 1) + ": ");
+  var y = prompt("Ingrese la coordenada y del punto " + (i + 1) + ": ");
+
+  if (x > 0 && y > 0) {
+    puntosPrimerCuadrante++;
+  } else if (x < 0 && y > 0) {
+    puntosSegundoCuadrante++;
+  } else if (x < 0 && y < 0) {
+    puntosTercerCuadrante++;
+  } else if (x > 0 && y < 0) {
+    puntosCuartoCuadrante++;
+  }
+}
+
+console.log("Se ingresaron " + cantidadPuntos + " puntos.");
+console.log("Se ingresaron " + puntosPrimerCuadrante + " puntos en el primer cuadrante.");
+console.log("Se ingresaron " + puntosSegundoCuadrante + " puntos en el segundo cuadrante.");
+console.log("Se ingresaron " + puntosTercerCuadrante + " puntos en el tercer cuadrante.");
+console.log("Se ingresaron " + puntosCuartoCuadrante + " puntos en el cuarto cuadrante.");
+</script>
+    
+</body>
+</html>

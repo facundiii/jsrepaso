@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepto de acumulador</title>
+</head>
+<body>
+
+<script>
+var lista1 = [];
+var lista2 = [];
+for (var i = 0; i < 3; i++) {
+  var valor = prompt("Ingrese un valor para la lista 1: ");
+  lista1.push(valor);
+}
+for (var i = 0; i < 3; i++) {
+  var valor = prompt("Ingrese un valor para la lista 2: ");
+  lista2.push(valor);
+}
+var valorAcumuladoLista1 = 0;
+for (var i = 0; i < lista1.length; i++) {
+  valorAcumuladoLista1 += lista1[i];
+}
+var valorAcumuladoLista2 = 0;
+for (var i = 0; i < lista2.length; i++) {
+  valorAcumuladoLista2 += lista2[i];
+}
+if (valorAcumuladoLista1 > valorAcumuladoLista2) {
+  console.log("La lista 1 tiene un valor acumulado mayor");
+} else if (valorAcumuladoLista1 < valorAcumuladoLista2) {
+  console.log("La lista 2 tiene un valor acumulado mayor");
+} else {
+  console.log("Las listas tienen un valor acumulado igual");
+}
+</script>
+    
+</body>
+</html>
